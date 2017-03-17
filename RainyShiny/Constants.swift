@@ -17,8 +17,13 @@ let API_KEY = "f35f3d0731c14c2f250cb78dd7c125c5"
 
 typealias DownloadComplete = () -> ()
 
-let CURRENT_WEATHER_URL = "\(BASE_URL)\(LATITUDE)\(Location.sharedInstance.latitude)\(LONGITUDE)\(Location.sharedInstance.longitude)\(APP_ID)\(API_KEY)"
+let CURRENT_WEATHER_URL = "\(BASE_URL)\(LATITUDE)\(Location.sharedInstance.latitude!)\(LONGITUDE)\(Location.sharedInstance.longitude!)\(APP_ID)\(API_KEY)"
+//
+//let CURRENT_WEATHER_URL = "\(BASE_URL)\(LATITUDE)33\(LONGITUDE)130\(APP_ID)\(API_KEY)"
 
 //let FORECAST_URL = "http://sample.openweathermap.org/data/2.5/forecast/daily?lat=\(Location.sharedInstance.latitude)&lon=\(Location.sharedInstance.longitude)&cnt=10&appid=\(API_KEY)"
 
-let FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast/daily?lat=\(Location.sharedInstance.latitude)&lon=\(Location.sharedInstance.longitude)&cnt=10&appid=f35f3d0731c14c2f250cb78dd7c125c5"
+//let FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast/daily?lat=33&lon=130&cnt=10&appid=f35f3d0731c14c2f250cb78dd7c125c5"
+
+let FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast/daily?lat=\(Location.sharedInstance.latitude!)&lon=\(Location.sharedInstance.longitude!)&cnt=10&appid=f35f3d0731c14c2f250cb78dd7c125c5"
+

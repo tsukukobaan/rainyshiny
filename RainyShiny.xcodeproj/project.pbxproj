@@ -91,6 +91,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		348CF6E41E7BFE0A00D100D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				344626751E7419FA00C76C70 /* CurrentWeather.swift */,
+				3491B6C91E74EE6600AAE6BE /* Forecast.swift */,
+				34ED83331E75086A001CD114 /* Location.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		348CF6E51E7BFEE100D100D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				344626711E740D6E00C76C70 /* WeatherVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		348CF6E61E7BFEF300D100D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34ED83311E74FB4F001CD114 /* WeatherCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		348CF6E71E7C08CD00D100D5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				34AD4BFD1E73E90A00B2C87D /* AppDelegate.swift */,
+				34AD4C041E73E90A00B2C87D /* Assets.xcassets */,
+				34AD4C061E73E90A00B2C87D /* LaunchScreen.storyboard */,
+				34AD4C091E73E90A00B2C87D /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		34AD4BF11E73E90A00B2C87D = {
 			isa = PBXGroup;
 			children = (
@@ -116,17 +153,12 @@
 		34AD4BFC1E73E90A00B2C87D /* RainyShiny */ = {
 			isa = PBXGroup;
 			children = (
-				34AD4BFD1E73E90A00B2C87D /* AppDelegate.swift */,
-				344626711E740D6E00C76C70 /* WeatherVC.swift */,
+				348CF6E71E7C08CD00D100D5 /* SupportingFiles */,
+				348CF6E61E7BFEF300D100D5 /* View */,
+				348CF6E51E7BFEE100D100D5 /* Controller */,
+				348CF6E41E7BFE0A00D100D5 /* Model */,
 				34AD4C011E73E90A00B2C87D /* Main.storyboard */,
-				34AD4C041E73E90A00B2C87D /* Assets.xcassets */,
-				34AD4C061E73E90A00B2C87D /* LaunchScreen.storyboard */,
-				34AD4C091E73E90A00B2C87D /* Info.plist */,
 				344626731E74188500C76C70 /* Constants.swift */,
-				344626751E7419FA00C76C70 /* CurrentWeather.swift */,
-				3491B6C91E74EE6600AAE6BE /* Forecast.swift */,
-				34ED83311E74FB4F001CD114 /* WeatherCell.swift */,
-				34ED83331E75086A001CD114 /* Location.swift */,
 			);
 			path = RainyShiny;
 			sourceTree = "<group>";

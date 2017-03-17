@@ -68,15 +68,23 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     }
     
     func downLoadForecastData(completed: @escaping DownloadComplete) {
-        let forecastURL = URL(string: FORECAST_URL)!
-        Alamofire.request(forecastURL).responseJSON { response in
+        //let forecastURL = URL(string: FORECAST_URL)!
+        Alamofire.request(FORECAST_URL).responseJSON { response in
             let result = response.result
+            
+            
             if let dict = result.value as? Dictionary<String, AnyObject> {
+                
                 if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
+                    
                     for obj in list {
+                        print("parsing the list")
                         let forecast = Forecast(weatherDict: obj)
                         self.forecasts.append(forecast)
+                        print("parsed object")
                         print(obj)
+                        print("obj end")
+                        
                         print(FORECAST_URL)
                         print(CURRENT_WEATHER_URL)
                         
@@ -113,10 +121,15 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     
     func updateMainUI() {
         dateLabel.text = currentWeather.date
+        print(currentWeather.date)
         currentTempLabel.text = "\(currentWeather.currentTemp)"
+        print(currentWeather.currentTemp)
         currentWeatherTypeLabel.text = currentWeather.weatherType
+        print("\(currentWeather.weatherType)")
         locationLabel.text = currentWeather.cityName
+        print("\(currentWeather.cityName)")
         currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
+        print("end update UI")
     }
 
     

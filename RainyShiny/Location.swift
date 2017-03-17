@@ -6,7 +6,6 @@
 //  Copyright © 2017年 TokyoIceHockeyChannel. All rights reserved.
 //
 
-import Foundation
 import CoreLocation
 
 class Location {
